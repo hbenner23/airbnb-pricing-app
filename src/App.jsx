@@ -24,13 +24,15 @@ function App() {
 
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center px-6"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+  className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center px-6"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
+  }}
+>
+    
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
 
