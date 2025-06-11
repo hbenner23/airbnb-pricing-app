@@ -24,12 +24,13 @@ function App() {
 
   return (
     <div
-      className="min-h-screen w-screen bg-cover bg-center flex items-center justify-center"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"
-      }}
+  className="min-h-screen w-full bg-cover bg-center flex items-center justify-center px-6"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"
+  }}
+>
     >
-      <div className="bg-white bg-opacity-90 backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-2xl">
+    <div className="bg-white bg-opacity-90 backdrop-blur-md p-10 rounded-2xl shadow-xl w-full max-w-5xl">
         <h1 className="text-3xl font-bold text-center mb-6">Airbnb Price Predictor</h1>
 
         <div className="space-y-4">
