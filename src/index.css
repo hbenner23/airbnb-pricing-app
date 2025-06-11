@@ -7,7 +7,6 @@ html, body, #root {
   color: white;
 }
 
-
 /* Tailwind base */
 @tailwind base;
 @tailwind components;

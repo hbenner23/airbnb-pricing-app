@@ -24,15 +24,14 @@ function App() {
 
   return (
     <div
-  className="min-h-screen w-full flex items-center justify-center bg-cover bg-center"
-  style={{
-    backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
-  }}
->
-
+      className="relative min-h-screen w-full flex items-center justify-center bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+      }}
+    >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
@@ -46,10 +45,10 @@ function App() {
             <input
               type="number"
               value={bedrooms}
-              onChange={(e) => setBedrooms(+e.target.value)}
+              onChange={(e) => setBedrooms(Math.floor(+e.target.value))}
               min="0"
               max="8"
-              step="0.1"
+              step="1"
               className="w-full border border-gray-300 rounded-lg p-3 text-black"
             />
           </div>
@@ -59,10 +58,10 @@ function App() {
             <input
               type="number"
               value={bathrooms}
-              onChange={(e) => setBathrooms(+e.target.value)}
+              onChange={(e) => setBathrooms(Math.round(+e.target.value * 2) / 2)}
               min="0"
               max="8"
-              step="0.1"
+              step="0.5"
               className="w-full border border-gray-300 rounded-lg p-3 text-black"
             />
           </div>
@@ -72,10 +71,10 @@ function App() {
             <input
               type="number"
               value={guests}
-              onChange={(e) => setGuests(+e.target.value)}
+              onChange={(e) => setGuests(Math.floor(+e.target.value))}
               min="0"
               max="15"
-              step="0.1"
+              step="1"
               className="w-full border border-gray-300 rounded-lg p-3 text-black"
             />
           </div>
@@ -137,4 +136,3 @@ function App() {
 }
 
 export default App;
-
