@@ -1,3 +1,4 @@
+<h2 className="text-3xl text-red-500 font-bold">Tailwind is working!</h2>
 import { useState } from 'react';
 
 function App() {
@@ -23,16 +24,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen w-screen">
-      <div
-        className="relative h-full w-full flex items-center justify-center bg-cover bg-center overflow-hidden"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed"
-        }}
-      >
+    <div
+  className="min-h-screen w-full flex items-center justify-center bg-cover bg-center"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
+  }}
+>
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
