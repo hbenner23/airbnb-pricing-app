@@ -30,11 +30,11 @@ function App() {
           "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
       }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 z-0" />
 
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full px-4">
+      {/* Centered Content */}
+      <div className="relative z-10 h-full flex items-center justify-center px-4">
         <div className="bg-white bg-opacity-10 backdrop-blur-md p-10 rounded-2xl w-full max-w-4xl text-white">
           <h1 className="text-4xl font-bold text-center mb-6">Airbnb Price Predictor</h1>
 
@@ -45,9 +45,6 @@ function App() {
                 type="number"
                 value={bedrooms}
                 onChange={(e) => setBedrooms(Math.floor(+e.target.value))}
-                min="0"
-                max="8"
-                step="1"
                 className="w-full border border-gray-300 rounded-lg p-3 text-black"
               />
             </div>
@@ -58,9 +55,6 @@ function App() {
                 type="number"
                 value={bathrooms}
                 onChange={(e) => setBathrooms(Math.round(+e.target.value * 2) / 2)}
-                min="0"
-                max="8"
-                step="0.5"
                 className="w-full border border-gray-300 rounded-lg p-3 text-black"
               />
             </div>
@@ -71,9 +65,6 @@ function App() {
                 type="number"
                 value={guests}
                 onChange={(e) => setGuests(Math.floor(+e.target.value))}
-                min="0"
-                max="15"
-                step="1"
                 className="w-full border border-gray-300 rounded-lg p-3 text-black"
               />
             </div>
@@ -84,9 +75,6 @@ function App() {
                 type="number"
                 value={locationScore}
                 onChange={(e) => setLocationScore(+e.target.value)}
-                min="0"
-                max="10"
-                step="0.1"
                 className="w-full border border-gray-300 rounded-lg p-3 text-black"
               />
             </div>
